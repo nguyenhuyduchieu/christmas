@@ -40,6 +40,23 @@ hide_streamlit_style = """
     .stApp > header {display: none;}
     .stApp > footer {display: none;}
     .stApp > div[data-testid="stToolbar"] {display: none;}
+    
+    /* Ẩn Manage app và các phần tử quản lý */
+    button[title="Manage app"] {display: none !important;}
+    a[title="Manage app"] {display: none !important;}
+    div[data-testid="stAppViewContainer"] > div:first-child > div:first-child > div:first-child button {display: none !important;}
+    div[data-testid="stAppViewContainer"] > div:first-child > div:first-child > div:first-child a {display: none !important;}
+    button:has-text("Manage app") {display: none !important;}
+    a:has-text("Manage app") {display: none !important;}
+    [data-testid="manage-app-button"] {display: none !important;}
+    [data-testid="stAppToolbar"] {display: none !important;}
+    .stAppToolbar {display: none !important;}
+    
+    /* Ẩn tất cả button và link trong header/toolbar */
+    header button {display: none !important;}
+    header a {display: none !important;}
+    div[data-testid="stToolbar"] button {display: none !important;}
+    div[data-testid="stToolbar"] a {display: none !important;}
     </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
